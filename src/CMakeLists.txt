@@ -5,6 +5,6 @@ FIND_PACKAGE(Freetype REQUIRED)
 
 INCLUDE_DIRECTORIES(${FREETYPE_INCLUDE_DIRS})
 
-ADD_LIBRARY(frlib object.cpp line.cpp primitive.cpp vector.cpp primitives/bezier.cpp primitives/segment.cpp)
+ADD_LIBRARY(frlib line.cpp primitive.cpp renderer.cpp vector.cpp primitives/bezier.cpp primitives/segment.cpp)
 
 
