@@ -1,0 +1,80 @@
+FontRenderer 1.0.0
+Dominik Kaaser dominik@kaaser.at
+http://font.kaaser.at
+Copyright 2012
+
+LICENSE
+
+This project is licensed under a MIT license, see the file LICENSE in the
+project's main directory.
+
+REQUIREMENTS
+
+The library FreeType 2 is required for FontRenderer. FreeType 2 can be obtained
+from http://www.freetype.org or the system distribution's package repositories.
+
+BUILD
+
+This project uses the cmake build system. Type "cmake [download folder] && make"
+to build a binary within the "bin" subfolder of the current directory.
+
+At the current time, there do not exist any build parameters to be specified.
+
+USAGE
+    fontrenderer [options] fontfile [input [output]]
+
+The font file can be any file, that can be read and parsed by the FreeType 2
+library. Note, that the font file must define a valid outline and thus a pixel
+based font map cannot be specified.
+
+Options:
+    -h 
+    --help            shows a list of command line options
+
+    -v 
+    --version         print version info and exit
+
+    -l height
+    --line-height     set line height
+                      The line height is set as a number in floating point
+                      representation relative to the character height extracted
+                      from the font face.
+                      A value of 1.0 represents the default line height.
+
+    -w width
+    --letter-spacing  set letter spacing
+                      The letter spacing is set as a number in floating point
+                      representation relative to the character width extracted
+                      from the font face.
+                      A value of 1.0 represents the default letter spacing.
+
+    -s samples
+    --sample-rate     set sample rate for Bézier curves
+                      Sets the number of samples points to at least the given
+                      integer value per 1.0 units Bézier curve length. A
+                      minimum of 4 sample points will be used.
+    -u 
+    --no-scale        do not scale to unit square
+                      Disable scaling of the resulting data to the unit square.
+
+Note, that the simplicity of the output is neither guaranteed nor checked.
+
+FONT FILES
+
+You can get font files at the following locations:
+
+- Local system fonts
+    e.g. /usr/share/fonts/
+
+- Google Webfonts
+    http://www.google.com/webfonts
+    See https://googlefontdirectory.googlecode.com/hg/ for license information.
+
+- dafont.com
+    http://www.dafont.com/
+    See individual fonts for license information.
+
+- Open Font Library
+    http://openfontlibrary.org/
+    Choose fonts by license in the catalogue.
+
