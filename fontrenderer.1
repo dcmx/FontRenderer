@@ -1,0 +1,82 @@
+.TH fontrenderer 1 "" Jul-2012 ""
+.\" manual page by Dominik Kaaser
+.\" using pages made by Peter Palfrader as references
+.\" This manual page is under the same license as FontRenderer itself. See below.
+
+.SH NAME
+.LP
+FontRenderer \- Converts input text to polygonal data
+
+.SH SYNOPSIS
+.LP
+\fBfontrenderer\fP [\fIoptions\fP] fontfile [\fIinput\fP [\fIoutput\fP]]
+
+.SH DESCRIPTION
+.LP
+\fBFontRenderer\fR is a tool that converts a text to polygonal data in line format using the outline of a specified font.
+
+.SS
+OPTIONS
+.IP "\fIinput-file\fP" 8
+Is the file which contains the text to be rendered.
+If not specified or a minus (\-) is given, the code will be read from STDIN.
+
+.IP "\fIoutput-file\fP" 8
+Is the file to write the polygonal data to.
+If not specified or a minus (\-) is given,
+the code will be written to STDOUT.
+
+
+.IP "\fB\-l\fR, \fB--line-height\fP" 8
+Set the line height relative to the character height extracted from the font face.
+A value of 1.0 represents the default line height.
+
+.IP "\fB\-w\fR, \fB--letter-spacing\fP" 8
+Set the letter spacing relative to the character width extracted from the font face.
+A value of 1.0 represents the default letter spacing.
+
+.IP "\fB\-s\fR, \fB--sample-rate\fP" 8
+Set the sample rate for Bezier curve sampling. The value represents a number smaller than the total number of vertices per 1.0 units arc length sampled on the Bezier curve.
+
+.IP "\fB\-u\fR, \fB--no-scale\fP" 8
+Do not scale and shift the resulting data to the unit square.
+
+.IP "\fB\-h\fP, \fB--help\fP" 8
+Print a help message to STDOUT and exit
+
+.IP "\fB\-v\fP, \fB--version\fP" 8
+Print version info and exit
+
+
+.SH FONT FILES
+
+The font file can be any file, that can be read and parsed by the FreeType 2 library. The font file must define a valid outline and thus a pixel based font map cannot be specified.
+
+.SH OUTPUT FORMAT
+
+The resulting polygonal data is written in \*(lq.line\*(rq-format. Multiple polygonal chains may be specified within one file. A polygonal chain is specified by first the number of vertices followed by a list of vertices specified as pairs of floating-point numbers.
+
+.LP
+Note, that polygonal chains are not automatically closed to form closed polygons. Thus, the first and last point of a polygonal chain have to match in order to regard the polygonal chain as a closed polygon.
+
+.SH NOTES
+
+.LP
+The simplicity of the output is based on the definition of the font file and is neither checked nor guaranteed.
+
+.SH BUGS
+
+.LP
+Please report bugs to fontrenderer@kaaser.at.
+This program is still a beta release, so you should expect to find some.
+
+Also have a look at the project's web-site, 
+\fIhttp://font.kaaser.at/\fP.
+
+.SH AUTHOR
+
+.LP
+Dominik Kaaser <dominik@kaaser.at>
+.LP
+See also the CONTRIBUTORS file in the source package.
+
