@@ -52,7 +52,7 @@ Options:
     --sample-rate     set sample rate for Bézier curves
                       Sets the number of samples points to at least the given
                       integer value per 1.0 units Bézier curve length. A
-                      minimum of 4 sample points will be used.
+                      minimum of 1 sampled point will be used.
     -u 
     --no-scale        do not scale to unit square
                       Disable scaling of the resulting data to the unit square.
