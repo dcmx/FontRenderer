@@ -15,7 +15,7 @@
 namespace dcm {
 
 Renderer::Renderer() :
-		PRECISION(20), DEFAULTLINEHEIGHT(-1.2), lineHeight(1.0), letterSpacing(1.0), sampleRate(100), doScaleToUnit(
+		PRECISION(20), DEFAULTLINEHEIGHT(-1.8), lineHeight(1.0), letterSpacing(1.0), sampleRate(100), doScaleToUnit(
 				true) {
 
 	if (FT_Init_FreeType(&library))
