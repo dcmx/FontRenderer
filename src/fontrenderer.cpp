@@ -41,6 +41,7 @@ static string options_descriptions[] = {
 		"do not scale to unit square",
 		""
 };
+
 static string options_params[] = {
 		"",
 		"",
@@ -52,10 +53,16 @@ static string options_params[] = {
 };
 
 static const int usage(const int error = 0) {
+
 	ostream& out = error ? cerr : cout;
-	out << NAME << ": Converts a text to polygonal data in line "
-			"format using a" << endl << "specified font." << endl << endl << "Usage: " << programName
-			<< " [options] fontfile [input [output]]" << endl << endl << "Options:" << endl;
+
+	out << NAME << ": Converts a text to polygonal data in line format using a" << endl
+			<< "specified font." << endl
+			<< endl
+			<< "Usage: " << programName << " [options] fontfile [input [output]]" << endl
+			<< endl
+			<< "Options:" << endl;
+
 	int i = 0;
 	while (long_options[i].val) {
 		out << "    -" << (char) long_options[i].val << " " << options_params[i] << endl << "    " << "--" << left
