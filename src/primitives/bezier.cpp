@@ -7,6 +7,8 @@
 
 #include "bezier.h"
 
+#define MINSAMPLENUM 3.0
+
 namespace dcm {
 
 unsigned int Bezier::sampleRate;
@@ -30,11 +32,11 @@ const Vector Bezier::getStartPoint() const {
 	return vertices.front();
 }
 const int Bezier::size() const {
-	int samples = (int) std::max(4.0, length * (double) sampleRate);
+	int samples = (int) std::max(MINSAMPLENUM, length * (double) sampleRate);
 	return samples - 1;
 }
 void Bezier::output(std::ostream& out) const {
-	double samples = std::max(4.0, length * (double) sampleRate);
+	double samples = std::max(MINSAMPLENUM, length * (double) sampleRate);
 	double sampleLength = 1.0 / samples;
 	int len = (int)samples - 1;
 	for (int i = 1; i < len; i++)
