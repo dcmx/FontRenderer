@@ -34,7 +34,7 @@ const int Bezier::size() const {
 	return samples - 1;
 }
 void Bezier::output(std::ostream& out) const {
-	double samples = std::max(4.0, length * (double) sampleRate);
+	int samples = (int) std::max(4.0, length * (double) sampleRate);
 	double sampleLength = 1.0 / samples;
 	for (int i = 1; i < samples - 1; i++)
 		out << evaluate(sampleLength * (double) i) << std::endl;
