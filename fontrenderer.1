@@ -13,7 +13,7 @@ FontRenderer \- Converts input text to polygonal data
 
 .SH DESCRIPTION
 .LP
-\fBFontRenderer\fR is a tool that converts a text to polygonal data in line format using the outline of a specified font.
+\fBFontRenderer\fR is a tool that converts a text to polygonal data in \*(lq.line\*(rq-format using the outline of a specified font.
 
 .SS
 OPTIONS
@@ -54,7 +54,7 @@ The font file can be any file, that can be read and parsed by the FreeType 2 lib
 
 .SH OUTPUT FORMAT
 
-The resulting polygonal data is written in \*(lq.line\*(rq-format. Multiple polygonal chains may be specified within one file. A polygonal chain is specified by first the number of vertices followed by a list of vertices specified as pairs of floating-point numbers.
+The resulting polygonal data is written in \*(lq.line\*(rq-format. Multiple polygonal chains may be specified within one file. A polygonal chain is specified by first the number of vertices followed by a list of vertices, one vertex per line. The vertices are specified as pairs of floating-point numbers separated by at least one white space character.
 
 .LP
 Note, that polygonal chains are not automatically closed to form closed polygons. Thus, the first and last point of a polygonal chain have to match in order to regard the polygonal chain as a closed polygon.
