@@ -29,7 +29,6 @@ public:
 	const Vector getFirstVertex() const;
 	void updateBoundingBox(Vector& leftBottom, Vector& rightTop) const;
 private:
-	FT_Face* face;
 
 	const std::string line;
 	Vector leftBottom;
