@@ -8,10 +8,10 @@
 
 #define VERSION "1.0.0"
 #define NAME "FontRenderer"
+
 #include <iostream>
 #include <istream>
 #include <fstream>
-#include <unistd.h>
 #include <getopt.h>
 #include <memory>
 
