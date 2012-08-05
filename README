@@ -20,6 +20,9 @@ to build a binary within the "bin" subfolder of the current directory.
 
 At the current time, there do not exist any build parameters to be specified.
 
+See the file README-WINDOWS for additional details on how to build and run this
+project on Microsoft Windows systems.
+
 USAGE
     fontrenderer [options] fontfile [input [output]]
 

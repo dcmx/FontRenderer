@@ -1,0 +1,47 @@
+README WINDOWS
+
+This file contains additional information on how to build FontRenderer on
+Microsoft Windows based systems.
+
+PRECOMPILED BINARIES
+
+A binary version licensed under the terms of the GNU General Public License
+(GPL)  can be obtained from the project's web site, see the downloads section.
+
+LIBRARIES
+
+FreeType 2
+The FreeType 2 library is required to build this project. A copy of FreeType 2
+can be obtained from http://www.freetype.org/. Precompileld binaries distributed
+under the GPL-License are part of the GnuWin32 Project, see
+http://gnuwin32.sourceforge.net/packages/freetype.htm for download URIs.
+Additionally, the original FreeType 2 package contains a build environment for
+use with Microsoft Visual Studio.
+
+Gnu GetOpt
+The command line handling is done using getopt_long as part of the Gnu-Version
+of GetOpt. Thus, a Windows port of GetOpt is required. A version that has been
+found working can be downloaded from the following ressource:
+http://www.codeproject.com/Articles/157001/Full-getopt-Port
+A working getopt.dll can be compiled using the Visual Studio projects published
+at above ressource.
+
+ICU - International Components for Unicode
+Strings in UTF8-Encoding are parsed using the ICU Library. Binary distributions
+and header files can be obtained from http://site.icu-project.org/. You can use
+the font "Arial Unicode MS" (C:\Windows\Fonts\arialuni.ttf) to display the
+following Japanese test string: 計算幾何学. Note, that UTF8 input must be
+enabled at compile time by setting the preprocessor flag USE_UTF8.
+
+DEVELOPMENT ENVIRONMENT
+
+Eclipse CDT
+We use the Eclipse CDT Environment in junction with Microsoft Visual Studio as
+compiler to build the individual object files and link the executable.
+Unfortunately, at the current time the Eclipse tool chain detection seems to
+fail detecting the Visual Studio environment variables. Thus, the Visual Studio
+command line tool is used to set up those settings. An example command line to
+start Eclipse, assuming all programs are installed in their default folders, is
+"C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" x86
+"C:\Program Files\eclipse\eclipse"
+
