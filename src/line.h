@@ -12,7 +12,6 @@
 #include <list>
 #include <string>
 #include "primitive.h"
-#include "primitives/segment.h"
 
 #define SHIFT 20
 #define UNSCALE (1.0 / (double)(1 << SHIFT))
