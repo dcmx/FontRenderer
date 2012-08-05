@@ -29,17 +29,12 @@ public:
 	const Vector getFirstVertex() const;
 	void updateBoundingBox(Vector& leftBottom, Vector& rightTop) const;
 private:
-
 	const std::string line;
-	Vector leftBottom;
-	Vector rightTop;
 
 	std::list<std::list<const Primitive*> > primitives;
 
 	Vector position;
 	Vector offset;
-	unsigned long height;
-	int bezierDegree;
 
 	void moveTo(const Vector to);
 	void lineTo(const Vector to);
