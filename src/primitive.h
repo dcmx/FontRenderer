@@ -14,8 +14,8 @@
 namespace dcm {
 class Primitive {
 public:
-	Primitive();
-	virtual ~Primitive();
+	Primitive() { }
+	virtual ~Primitive() { }
 	virtual const int size() const = 0;
 	virtual const Vector getStartPoint() const = 0;
 	virtual void output(std::ostream& out) const = 0;
