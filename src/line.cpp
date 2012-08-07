@@ -35,7 +35,12 @@ Line::Line(const std::string line) :
 }
 
 Line::~Line() {
-
+	for (std::list<std::list<const Primitive*> >::iterator it1 = primitives.begin(); it1 != primitives.end(); ++it1) {
+		for (std::list<const Primitive*>::const_iterator it2 = it1->begin(); it2 != it1->end(); ++it2)
+			delete *it2;
+		it1->clear();
+	}
+	primitives.clear();
 }
 
 void Line::output(std::ostream& out) const {
@@ -43,11 +48,11 @@ void Line::output(std::ostream& out) const {
 	for (std::list<std::list<const Primitive*> >::const_iterator it1 = primitives.begin(); it1 != primitives.end(); ++it1) {
 
 		int size = 1;
-		for (std::list<const Primitive*>::const_iterator it2 = (it1)->begin(); it2 != (it1)->end(); ++it2)
+		for (std::list<const Primitive*>::const_iterator it2 = it1->begin(); it2 != it1->end(); ++it2)
 			size += (*it2)->size();
 		out << size << std::endl;
 		out << it1->front()->getStartPoint() << std::endl;
-		for (std::list<const Primitive*>::const_iterator it2 = (it1)->begin(); it2 != (it1)->end(); ++it2)
+		for (std::list<const Primitive*>::const_iterator it2 = it1->begin(); it2 != it1->end(); ++it2)
 			(*it2)->output(out);
 
 	}
