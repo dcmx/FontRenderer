@@ -1,12 +1,11 @@
 //============================================================================
 // Name        : fontrenderer.cpp
 // Author      : Dominik S. Kaaser
-// Version     : 1.0.0
 // Copyright   : (C) Copyright 2012
 // Description : Font-Renderer
 //============================================================================
 
-#define VERSION "1.0.0"
+#define VERSION "1.1.0"
 #define NAME "FontRenderer"
 
 #include <iostream>
