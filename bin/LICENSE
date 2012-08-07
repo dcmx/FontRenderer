@@ -1,0 +1,10 @@
+This is a binary build of the project "FontRenderer". The binary is licensed
+under the GNU GENERAL PUBLIC LICENSE Version 3. See licenses/LICENSE for further
+details. The source code of FontRenderer is licensed under a MIT-style license,
+see licenses/LICENSE-FONTRENDERER for further details.
+
+The libraries shipped within this package are licensed under their respecive
+licenses. See licenses/LICENSE-FREETYPE for the license applicable to freetype,
+licenses/LICENSE-GNU-C-LIBRARY for the license of the GNU C Library which
+includes getopt and licenses/LICENSE-ICU for the license of the ICU -
+International Components for Unicode library.
