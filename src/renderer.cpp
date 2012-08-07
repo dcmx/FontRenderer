@@ -98,10 +98,9 @@ void Renderer::output(std::ostream& out) {
 
 void Renderer::input(std::istream& in) {
 	while (!in.eof()) {
-		char* tmp = new char[1024];
-		in.getline(tmp, 1024);
-		addLine(new Line(std::string(tmp)));
-		delete[] tmp;
+		std::string line;
+		std::getline(in, line);
+		addLine(new Line(line));
 	}
 }
 
